@@ -1,0 +1,122 @@
+{
+  "info": {
+    "name": "BaziStudio Backend",
+    "_postman_id": "bazi-backend-001",
+    "description": "All endpoints for BaziStudio backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["users"]
+        }
+      }
+    },
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Haseeb\",\n  \"email\": \"haseeb@example.com\",\n  \"password\": \"123456\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["users"]
+        }
+      }
+    },
+    {
+      "name": "Get Products",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["products"]
+        }
+      }
+    },
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Laptop\",\n  \"price\": 1200,\n  \"stock\": 5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["products"]
+        }
+      }
+    },
+    {
+      "name": "Get Orders",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["orders"]
+        }
+      }
+    },
+    {
+      "name": "Create Order",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"REPLACE_WITH_USER_ID\",\n  \"items\": [{ \"productId\": \"REPLACE_WITH_PRODUCT_ID\", \"qty\": 2 }],\n  \"total\": 2400\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["orders"]
+        }
+      }
+    },
+    {
+      "name": "Send Contact Message",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Haseeb\",\n  \"email\": \"haseeb@example.com\",\n  \"message\": \"Hello BaziStudio!\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/contact",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api","contact"]
+        }
+      }
+    }
+  ]
+}
